@@ -1,80 +1,234 @@
-body{
-    background-color: aliceblue;
+
+* {
+    box-sizing: border-box;
 }
-.v1{ display: inline-block;left: 100px;
-    background-color:rgb(109, 3, 154);
-    border-radius:5%;
-    width: 250px;
-    height: 320px;
+
+body {
+    background-color: #ecf2ff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* کارت نتیجه */
+.v1 {
+    width: 270px;
+    height: 390px;
+    background: linear-gradient(
+        to bottom,
+        #7857ff,
+        #2e2be9
+    );
+
+    border-radius: 30px;
     text-align: center;
-    font-size: 15px;
     color: white;
+
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.v3{
-    background-color: rgb(76, 3, 115);
-    width:160px;       
-    height: 160;
-    margin: auto;
-    border-radius: 100%;
+
+/* عنوان */
+.v1 h1 {
+    font-size: 22px;
+    color: #d0c8ff;
+    margin: 0 0 25px;
+}
+
+/* دایره امتیاز */
+.v3 {
+    width: 160px;
+    height: 160px;
+
+    background: linear-gradient(
+        to bottom,
+        #4e21ca,
+        #2421ca
+    );
+
+    border-radius: 50%;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 25px;
-    color:white;
-}
-.z{
-    font-size: 10px;
+
     color: white;
 }
 
-.v2{display: inline-block;right: 100px;
-height: 320px;
-    width: 250px;
-border-radius: 5%;
-align-items: center;
-background-color:whitesmoke
-;
-margin-top: 100px;
+/* عدد نتیجه */
+.v3 h2 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
 }
-.v5{background-color: #ffe5e5;
-    color: #ff4b4b;
-    width: 250px;
-    height: 35px;
-    border-radius: 14px;
-    align-items: center;
 
+/* of 100 */
+.z {
+    font-size: 14px;
+    color: #b9afff;
+    margin: 0;
+}
 
+/* Great */
+.v1 h3 {
+    font-size: 25px;
+    margin: 25px 0 10px;
 }
-.v6{background-color: #fff3d6;
-    color: #d7a100;
-     width: 250px;
-    height: 35px;
-    border-radius: 14px;
+
+/* متن توضیحات */
+.v1 > p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d0c8ff;
+
+    margin: 0;
+    padding: 0 5px;
+
+    max-width: 230px;
+}
+
+/* کارت Summary */
+.v2 {
+    width: 270px;
+    height: 390px;
+
+    background-color: white;
+
+    border-radius: 0 30px 30px 0;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* عنوان Summary */
+.v2 h2 {
+    font-size: 22px;
+    color: #303b59;
+    margin: 0 0 20px;
+}
+
+/* ردیف های امتیاز */
+.v5,
+.v6,
+.v7,
+.v8 {
+    width: 100%;
+    height: 45px;
+
+    border-radius: 10px;
+
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10px;
+
+    margin: 0 0 12px;
+
+    font-size: 14px;
+    font-weight: 500;
 }
-.v7{
-    background-color: #ddf8f1;
-    color: #00a88f;
-     width: 250px;
-    height: 35px;
-    border-radius: 14px;
-    align-items: center;
+
+/* Reaction */
+.v5 {
+    background-color: #fff1f1;
+    color: #ff5555;
 }
-.v8{
-    background-color: #ece9ff;
-    color: #4d4dff;
-     width: 250px;
-    height: 35px;
-    border-radius: 14px;
-    align-items: center;
+
+/* Memory */
+.v6 {
+    background-color: #fff7e5;
+    color: #e4a700;
 }
-.v9{
-    width: 250px;
-    padding: 10px;
-    border-radius: 50px;
-    background-color:rgb(5, 5, 85);
+
+/* Verbal */
+.v7 {
+    background-color: #e9f9f2;
+    color: #00a987;
+}
+
+/* Visual */
+.v8 {
+    background-color: #f0efff;
+    color: #5145ff;
+}
+
+/* تصاویر */
+.v5 img,
+.v6 img,
+.v7 img,
+.v8 img {
+    width: 18px;
+    height: 18px;
+}
+
+/* امتیازها */
+.v5 span,
+.v6 span,
+.v7 span,
+.v8 span {
+    color: #303b59;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+/* دکمه */
+.v9 {
+    width: 100%;
+    height: 45px;
+
+    margin-top: auto;
+
     border: none;
-font-size: 18px;
-color: white;
+    border-radius: 30px;
+
+    background-color: #303b59;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* حالت موس روی دکمه */
+.v9:hover {
+    background: linear-gradient(
+        to bottom,
+        #7857ff,
+        #2e2be9
+    );
+}
+
+/* موبایل */
+@media (max-width: 550px) {
+
+    body {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .v1 {
+        width: 100%;
+        height: 360px;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .v2 {
+        width: 100%;
+        height: 390px;
+        border-radius: 0;
+        padding: 25px;
+    }
+
 }
